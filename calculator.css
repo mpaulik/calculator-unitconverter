@@ -1,0 +1,194 @@
+.numbers{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    margin:2px;
+    background-color: #489BE0;
+}
+
+.numbers:hover {
+    background-color: #86dce0;
+    box-shadow: 0 0px #666;
+    transform: translateY(-1px)
+}
+
+.numbers:active {
+    background-color: #86dce0;
+    box-shadow: 0 0px #666;
+    transform: translateY(3px);
+}
+
+#inputfield{
+    width: 218px;
+    margin:5px;
+    height: 50px;
+    font-size:30px;
+    padding: 4px;
+    background-color : white;
+    text-align: center;
+    box-shadow: 4px 0px 12px black inset;
+}
+
+body{
+    background: url("calculator_bg2.jpg");
+    height: 100vh;
+    transition: background-color .5s;
+    font-family: 'Sunflower', sans-serif;
+}
+
+.calculator-wrapper{
+    text-align: center;
+    width:260px;
+    background-color:rgba(0, 0, 0, 0.4);
+    border-radius:10px;
+    margin: 0 auto;
+    padding:15px 10px 15px 10px;
+}
+
+form{
+    margin:0 auto;
+    display:inline-block;
+}
+
+.calc-buttons {
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.equal{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    margin:2px;
+    background-color: orange;
+}
+
+.equal:hover{
+    background-color: darkorange;
+    box-shadow: 0 0px #666;
+    transform: translateY(-1px);
+}
+
+.equal:active{
+     background-color: orangered;
+     box-shadow: 0 0px #666;
+     transform: translateY(3px);
+ }
+
+.operator{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    margin:2px;
+    background-color: yellow;
+}
+
+.clean-clear{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    margin:2px;
+    background-color: yellow;
+}
+
+.operator:hover,.clean-clear:hover {
+    background-color: red;
+    box-shadow: 0 0px #666;
+    transform: translateY(-1px)
+}
+
+.operator:active, .clean-clear:active{
+    background-color: red;
+    box-shadow: 0 0px #666;
+    transform: translateY(3px);
+}
+
+h1{
+    font-family: 'Sunflower', sans-serif;
+    text-align: center;
+    color: white;
+    padding: 0px 0px 5px 0px;
+}
+
+#welcome-slide{
+    text-align: center;
+}
+#help-bar{
+    opacity: 0.7;
+
+}
+
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bottom-box{
+    padding-top: 13px;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.container{
+    margin-bottom: 20px;
+}
+
+
+

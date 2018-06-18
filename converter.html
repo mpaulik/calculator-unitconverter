@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unit Converter</title>
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="converter.css">
+
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="converter.html">Unit Converter</a>
+    <a href="#">About</a>
+</div>
+<div id="main">
+    <span style="font-size:26px; color: #111111; cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+</div>
+<img src="converter_logo.png" class="logo">
+<div class="container">
+    <div class="converter-wrapper">
+        <div class="row">
+            <div class="col-4 w3-animate-left">
+                <h2>Speed</h2>
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half w3-margin-top">
+                        <p>MPH</p>
+                        <input id="inputMPH" class="w3-input w3-border" type="number" placeholder="MPH"
+                               oninput="speedConverter(this.id,this.value)"
+                               onchange="speedConverter(this.id,this.value)">
+                    </div>
+                    <div class="w3-half w3-margin-top">
+                        <p>KPH</p>
+                        <input id="inputKPH" class="w3-input w3-border" type="number" placeholder="KPH"
+                               oninput="speedConverter(this.id,this.value)"
+                               onchange="speedConverter(this.id,this.value)">
+                    </div>
+                    <div class="w3-half w3-margin-top">
+                        <p>Knots</p>
+                        <input id="inputKnots" class="w3-input w3-border" type="number" placeholder="Knots"
+                               oninput="speedConverter(this.id,this.value)"
+                               onchange="speedConverter(this.id,this.value)">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-4 w3-animate-bottom">
+                <h2>Length</h2>
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half w3-margin-top">
+                        <p>Feet</p>
+                        <input id="inputFeet" class="w3-input w3-border" type="number" placeholder="Feet"
+                               oninput="lengthConverter(this.id,this.value)"
+                               onchange="lengthConverter(this.id,this.value)">
+                    </div>
+                    <div class="w3-half w3-margin-top">
+                        <p>Meters</p>
+                        <input id="inputMeters" class="w3-input w3-border" type="number" placeholder="Meters"
+                               oninput="lengthConverter(this.id,this.value)"
+                               onchange="lengthConverter(this.id,this.value)">
+                    </div>
+                    <div class="w3-half w3-margin-top">
+                        <p>Inches</p>
+                        <input id="inputInches" class="w3-input w3-border" type="number" placeholder="Inches"
+                               oninput="lengthConverter(this.id,this.value)"
+                               onchange="lengthConverter(this.id,this.value)">
+                    </div>
+                    <div class="w3-half w3-margin-top">
+                        <p>cm</p>
+                        <input id="inputcm" class="w3-input w3-border" type="number" placeholder="cm"
+                               oninput="lengthConverter(this.id,this.value)"
+                               onchange="lengthConverter(this.id,this.value)">
+                    </div>
+                    <div class="w3-half w3-margin-top">
+                        <p>Yards</p>
+                        <input id="inputYards" class="w3-input w3-border" type="number" placeholder="Yards"
+                               oninput="lengthConverter(this.id,this.value)"
+                               onchange="lengthConverter(this.id,this.value)">
+                    </div>
+                    <div class="w3-half w3-margin-top">
+                        <p>Kilometers</p>
+                        <input id="inputKilometers" class="w3-input w3-border" type="number" placeholder="Kilometers"
+                               oninput="lengthConverter(this.id,this.value)"
+                               onchange="lengthConverter(this.id,this.value)">
+                    </div>
+                    <div class="w3-half w3-margin-top">
+                        <p>Miles</p>
+                        <input id="inputMiles" class="w3-input w3-border" type="number" placeholder="Miles"
+                               oninput="lengthConverter(this.id,this.value)"
+                               onchange="lengthConverter(this.id,this.value)">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 w3-animate-right">
+                <h2>Weight</h2>
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half w3-margin-top">
+                        <p>Pounds</p>
+                        <input id="inputPounds" class="w3-input w3-border" type="number" placeholder="Pounds"
+                               oninput="weightConverter(this.id,this.value)"
+                               onchange="weightConverter(this.id,this.value)">
+                    </div>
+                    <div class="w3-half w3-margin-top">
+                        <p>Kilograms</p>
+                        <input id="inputKilograms" class="w3-input w3-border" type="number" placeholder="Kilograms"
+                               oninput="weightConverter(this.id,this.value)"
+                               onchange="weightConverter(this.id,this.value)">
+                    </div>
+                    <div class="w3-half w3-margin-top">
+                        <p>Ounces</p>
+                        <input id="inputOunces" class="w3-input w3-border" type="number" placeholder="Ounces"
+                               oninput="weightConverter(this.id,this.value)"
+                               onchange="weightConverter(this.id,this.value)">
+                    </div>
+                    <div class="w3-half w3-margin-top">
+                        <p>Grams</p>
+                        <input id="inputGrams" class="w3-input w3-border" type="number" placeholder="Grams"
+                               oninput="weightConverter(this.id,this.value)"
+                               onchange="weightConverter(this.id,this.value)">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="converter.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+</body>
+</html>

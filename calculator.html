@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+
+
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="converter.html">Unit Converter</a>
+    <a href="#">About</a>
+</div>
+<div id="main">
+    <span style="font-size:26px; color: #D3D8E8; cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+</div>
+<img src="calculator-logo.png" class="logo">
+<h1>Calculator</h1>
+<div class="container">
+    <div class="calculator-wrapper w3-center w3-animate-zoom">
+        <form name="form"  action="javascript:void(0);">
+            <input class="form-control" id="inputfield" name="inputfield" readonly="readonly" type="text" value="">
+        </form>
+        <table class="calc-buttons  " name="button-table">
+            <tr>
+                <td><button type="button" class="btn clean-clear"
+                            onclick="document.getElementById('inputfield').value = ''">C</button></td>
+                <td><button type="button" class="btn clean-clear" id="clear"
+                            onclick=del()><</button></td>
+                <td><button type="button" class="btn operator" id="slash"
+                            onclick=insert("/")>/</button></td>
+                <td><button type="button" class="btn operator" id="multiply" onclick=insert("*")>x</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn numbers" id="number7"
+                            onclick=insert(7)>7</button></td>
+                <td><button type="button" class="btn numbers" id="number8"
+                            onclick=insert(8)>8</button></td>
+                <td><button type="button" class="btn numbers" id="number9"
+                            onclick=insert(9)>9</button></td>
+                <td><button type="button" class="btn operator" id="minus"
+                            onclick=insert("-")>-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn numbers" id="number4"
+                            onclick=insert(4)>4</button></td>
+                <td><button type="button" class="btn numbers" id="number5"
+                            onclick=insert(5)>5</button></td>
+                <td><button type="button" class="btn numbers" id="number6"
+                            onclick=insert(6)>6</button></td>
+                <td><button type="button" class="btn operator"
+                            id="plus" onclick=insert("+")>+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn numbers" id="number1"
+                            onclick=insert(1)>1</button></td>
+                <td><button type="button" class="btn numbers" id="number2"
+                            onclick=insert(2)>2</button></td>
+                <td><button type="button" class="btn numbers" id="number3"
+                            onclick=insert(3)>3</button></td>
+                <td rowspan="2"><button type="submit" class="btn equal" id="equal"
+                                        style="height:106px" onclick=equal()>=</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="button" class="btn numbers" id="number0"
+                                        style="width: 107px" onclick=insert(0)>0</button></td>
+                <td><button type="button" class="btn numbers" id="dot" onclick=insert(".")>.</button></td>
+
+            </tr>
+        </table>
+    </div>
+   <!-- <div class="bottom-box">
+    <div class="w3-bar w3-black w3-animate-zoom" id="help-bar">
+        <button class="w3-bar-item w3-button" onclick="openMenu('help')">How to use?</button>
+        <button class="w3-bar-item w3-button" onclick="openMenu('formations')">Basic formations</button>
+        <button class="w3-bar-item w3-button" onclick="openMenu('about')">About</button>
+    </div>
+    <div id="help" class="w3-container w3-display-container menu w3-white w3-animate-right">
+  <span onclick="this.parentElement.style.display='none'"
+        class="w3-button w3-large w3-display-topright">&times;</span>
+        <h2>How to use that Calculator.</h2>
+        <p>You can use with mouse and keyboard too. <br>
+        if you want to calculate (minus) number, just type - </p>
+    </div>
+    <div id="formations" class="w3-container w3-display-container menu w3-white w3-animate-right">
+  <span onclick="this.parentElement.style.display='none'"
+        class="w3-button w3-large w3-display-topright">&times;</span>
+        <h2>Rectangle</h2>
+        <p>Lond123123123 England.</p>
+    </div>
+    <div id="about" class="w3-container w3-display-container menu w3-white w3-animate-right">
+  <span onclick="this.parentElement.style.display='none'"
+        class="w3-button w3-large w3-display-topright">&times;</span>
+        <h2>created: 2018</h2>
+        <p>London is the capital city of England.</p>
+    </div>-->
+</div>
+</div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="calculator.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
